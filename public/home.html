@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .frm-loging{
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+           background-color: aqua;
+        }
+        .nav-bar{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border: 1px solid black;
+            
+
+        }
+        .nav-bar span{
+            width: 100px;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <script src="../link/react/react.development.js"></script>
+    <script src="../link/react-dom/react-dom.development.js"></script>
+    <script src="../link/babel/babel.min.js"></script>
+
+    <!-- Load Babel -->
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+
+    <script type="text/babel">
+        function Navbar(){
+            return(
+                <nav className="nav-bar">
+                    <span>home</span>
+                    <span>shop</span>
+                    <span>Blog</span>
+                    <span>Contact</span>
+                </nav>
+            )
+        }
+
+        function Login() {
+            return (
+                <div className="container">
+                    <form action="" className="frm-loging">
+                        <h2>login</h2>
+                        <dl>
+                            <dt>user Name</dt>
+                            <dd><input type="text" /></dd>
+                            <dt>Password</dt>
+                            <dd><input type="Password" /></dd>
+
+                        </dl>
+                        <button>Login</button>
+                    </form>
+                </div>
+            )
+        }
+        // ReactDOM.render("Welcome to react js ", document.getElementById("root"));
+        ReactDOM.render( 
+            <section>
+                <Navbar/>
+                <Login/>
+            </section>, 
+        document.getElementById("root"));
+        // ReactDOM.render(
+        //     <section>
+        //         <Login/>
+        //         <Login/>
+        //     </section>, 
+        // document.getElementById("root"));
+
+
+    </script>
+</head>
+
+<body>
+    <!-- <h2>home</h2> -->
+    <noscript>please enable JavaScript on your browser</noscript>
+    <div id="root"></div>
+</body>
+
+</html>
