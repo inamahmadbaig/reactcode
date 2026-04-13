@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netfilx - watch Movies</title>
+    <style>
+        .bg-style{
+            background-image: url("images/banner.jpg");
+            background-size: cover;
+            height:  100vh;
+
+        }
+        .bg-shad{
+            background-color: rgba(0,0, 0, 0.5);
+            height: 100vh;
+        }
+        header{
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title{
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px white;
+        }
+
+        main{
+            margin-top: 150px;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../link/react/react.development.js"></script>
+    <script src="../link/react-dom/react-dom.development.js"></script>
+    <script src="../link/babel/babel.min.js"></script>
+    <script type="text/babel">
+
+        function NetfilxIndex(){
+            return(
+                <div className="bg-style">
+                    <div className="bg-shad">
+                        <NetfilxHeader/>
+                        <NetfilxMain/>
+                    </div>
+                </div>
+            )
+        }
+
+        function NetfilxHeader(){
+            return(
+                <header>
+                    <div>
+                        <span className="brand-title">NETFILX</span>
+                    </div>
+                    <div>
+                        <div className="input-group">
+                            <span className="bi bi-translate input-group-text"></span>
+                            <select name="" className="form-select">
+                                <option value="">Language</option>    
+                                <option value="">English</option>
+                                <option value="">हिंदी</option>
+                            </select>
+                            <button data-bs-target="#login" data-bs-toggle="modal" className="btn btn-danger ms-2">Sign in</button>
+                            <div  className="modal fade" id="login">
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h3 className="bi bi-person-fill">User Login</h3>
+                                            <button data-bs-dismiss="modal" className="btn btn-close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <dl>
+                                               
+                                                <dt>User ID</dt>
+                                                <dd><input type="text" className="form-control"/></dd>
+
+                                                <dt>Password</dt>
+                                                <dd><input type="Password" className="form-control"/></dd>
+                                            </dl>   
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button className="btn btn-warning">Login</button>
+                                            <button data-bs-dismiss="modal" className="btn btn-danger">Cancel</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            )
+        }
+
+        function NetfilxMain(){
+            return(
+                <main>
+                    <div className="text-white text-center">
+                        <div className="h1">
+                            Unlimited movies, shows, and more
+                        </div>
+                        <div className="h3">
+                            Watch anywhere. Cancel anytime.
+                        </div>
+                        <NetfilxRegister/>
+                    </div>
+                   
+                </main>
+            )
+        }
+        function NetfilxRegister(){
+            return(
+                <div>
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    <div className="d-flex justify-content-center">
+                        <form action="" className="input-group input-group-lg w-50">
+                            <input type="email" placeholder="Your email address" className="form-control"/>
+                            <button className="btn btn-danger ms-1">Get Started <span className="bi bi-chevron"></span></button>
+                        </form>    
+                    </div>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<NetfilxIndex/>,document.getElementById("root"));
+    </script>
+</head>
+<body>
+    <noscript>please enable JavaScript on your browser</noscript>
+    <div id="root"></div>
+</body>
+</html>
