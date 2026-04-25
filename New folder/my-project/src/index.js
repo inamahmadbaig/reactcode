@@ -12,6 +12,8 @@ import { DataBinding } from './component/login/data-binding/data-binding';
 
 import { OneWay } from './component/one-way/one-way';
 
+import { EventDemo } from './component/event-demo/event-demo';
+import { StyleBinding } from './component/StyleBinding/style-binding';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -22,7 +24,13 @@ root.render(
   // <React.StrictMode>
   //   <DataBinding/>
   // </React.StrictMode>
+  // <React.StrictMode>
+  //   <OneWay/>
+  // </React.StrictMode>
+  // <React.StrictMode>
+  //   <EventDemo/>
+  // </React.StrictMode>
   <React.StrictMode>
-    <OneWay/>
+    <StyleBinding/>
   </React.StrictMode>
 );
