@@ -14,6 +14,9 @@ import { OneWay } from './component/one-way/one-way';
 
 import { EventDemo } from './component/event-demo/event-demo';
 import { StyleBinding } from './component/StyleBinding/style-binding';
+import { ClassBinding } from './component/class-binding/class-binding';
+import { Animation } from './component/animation/animation';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -30,7 +33,13 @@ root.render(
   // <React.StrictMode>
   //   <EventDemo/>
   // </React.StrictMode>
+  // <React.StrictMode>
+  //   <StyleBinding/>
+  // </React.StrictMode>
+  // <React.StrictMode>
+  //   <ClassBinding/>
+  // </React.StrictMode>
   <React.StrictMode>
-    <StyleBinding/>
+    <Animation/>
   </React.StrictMode>
 );
